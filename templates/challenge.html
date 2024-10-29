@@ -6,7 +6,7 @@
 			</button>
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="#challenge">Challenge</a>
+					<a class="nav-link active" href="#challenge">Défi</a>
 				</li>
 				{% block solves %}
 					<li class="nav-item">
@@ -54,16 +54,16 @@
 									<a class="btn btn-info btn-hint btn-block load-hint" href="javascript:;" data-hint-id="{{ hint.id }}">
 										{% if hint.content %}
 											<small>
-												View Hint
+												Indice
 											</small>
 										{% else %}
 											{% if hint.cost %}
 												<small>
-													Unlock Hint for {{ hint.cost }} points
+													Débloquer un indice pour {{ hint.cost }} points
 												</small>
 											{% else %}
 												<small>
-													View Hint
+													Indice
 												</small>
 											{% endif %}
 										{% endif %}
@@ -97,7 +97,7 @@
 						<div class="row text-center">
 							<div class="col-md-12">
 								<p>
-									{{ attempts }}/{{ max_attempts }} attempt{{ max_attempts|pluralize }}
+									{{ attempts }}/{{ max_attempts }} essai{{ max_attempts|pluralize }}
 								</p>
 							</div>
 						</div>
@@ -135,7 +135,7 @@
 								<table class="table table-striped text-center">
 									<thead>
 									<tr>
-										<td><b>Name</b>
+										<td><b>Nom</b>
 										</td>
 										<td><b>Date</b>
 										</td>
