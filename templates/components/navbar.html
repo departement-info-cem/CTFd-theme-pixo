@@ -13,15 +13,6 @@
         </button>
         <div class="collapse navbar-collapse" id="base-navbars">
             <ul class="navbar-nav mr-auto">
-                {% for page in Plugins.user_menu_pages %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ page.route }}">{{ page.title }}</a>
-                    </li>
-                {% endfor %}
-
-                <li class="nav-item">
-                    <a class="nav-link" href="apropos">À propos</a>
-                </li>
 
                 {% if Configs.account_visibility != 'admins' %}
                     <li class="nav-item">
@@ -42,6 +33,18 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('challenges.listing') }}">Défis</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reglements">Règlements</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="apropos">À propos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="nouvelles">Nouvelles</a>
                 </li>
             </ul>
 
