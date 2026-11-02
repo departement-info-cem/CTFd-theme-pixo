@@ -285,7 +285,7 @@ function loadChals() {
         );
         categoryrow
           .find(".category-header")
-          .append($("<h3>" + category + "</h3>"));
+          .append($("<h3>" + htmlEntities(category) + "</h3>"));
 
         $challenges_board.append(categoryrow);
       }
@@ -314,8 +314,10 @@ function loadChals() {
         );
       }
 
-      const chalheader = $("<p>{0}</p>".format(chalinfo.name));
-      const chalscore = $("<span>{0}</span>".format(chalinfo.value));
+      const chalheader = $("<p>{0}</p>".format(htmlEntities(chalinfo.name)));
+      const chalscore = $(
+        "<span>{0}</span>".format(htmlEntities(chalinfo.value))
+      );
       for (let j = 0; j < chalinfo.tags.length; j++) {
         const tag = "tag-" + chalinfo.tags[j].value.replace(/ /g, "-");
         chalwrap.addClass(tag);
